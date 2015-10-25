@@ -1,0 +1,32 @@
+<div class="container formview">
+	<div class="jumbotron formview">
+
+		<!-- Form label -->
+		<h3 class="form-label">Insert new data</h2>
+		
+		<!-- Insert form template starting from this point -->
+		<div class="form-block">
+			<div class="form-horizontal">
+				{{#each columns}}
+				<div class="form-group">
+				    <label for="{{name}}" class="col-sm-2 control-label">{{title}}</label>
+				    <div class="col-sm-10">
+				      	<input type="text" class="form-control" id="{{name}}" placeholder="{{title}}">
+				    </div>
+			  	</div>
+			  	{{/each}}
+			</div>
+		
+			<!-- Submit and cancel button -->
+			<div class="btnBlock pull-right">
+				<input id="form-submit" class="btn btn-primary" type="submit" value="Submit">
+				<input id="form-clear" class="btn btn-secondary" type="button" value="Clear">
+			</div>
+			
+			<!-- To fix div breaking due to float from pull-left/right -->
+			<div class="clearfix"></div> 
+		</div>
+
+		<!-- Form template ends here -->
+	</div>
+</div>

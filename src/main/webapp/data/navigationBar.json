@@ -1,0 +1,16 @@
+{
+  "navigation": [
+    {
+      "name": "Data",
+      "url": "#"
+    },
+    {
+      "name": "Form",
+      "url": "#"
+    },
+    {
+      "name": "Settings",
+      "url": "#"
+    }
+  ]
+}

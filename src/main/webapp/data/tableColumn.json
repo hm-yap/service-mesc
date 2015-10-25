@@ -1,0 +1,31 @@
+{
+	"columns": [
+		{ 
+			"name": "id", 
+			"title": "ID"
+		},
+		{ 
+			"name": "firstName", 
+			"title": "First Name" 
+		},
+		{ 
+			"name": "lastName", 
+			"title": "Last Name" 
+		},
+		{ 
+			"name": "jobTitle", 
+			"title": "Job Title", 
+			"breakpoints": "xs" 
+		},
+		{ 
+			"name": "started", 
+			"title": "Started On", 
+			"breakpoints": "xs sm" 
+		},
+		{ 
+			"name": "birthDate", 
+			"title": "Date of Birth", 
+			"breakpoints": "xs sm md" 
+		}
+	]
+}
