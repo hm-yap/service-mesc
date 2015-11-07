@@ -3,11 +3,15 @@ package com.mesc.service.entity;
 import java.math.BigDecimal;
 import java.util.Date;
 
+import javax.persistence.AttributeOverride;
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
 @Table(name="invoice")
+@AttributeOverride(name = "guid", column = @Column(name = "invoiceid"))
 public class Invoice extends BaseEntity {
 	
 	/**
@@ -21,7 +25,18 @@ public class Invoice extends BaseEntity {
 		super();
 		this.setInvoiceDate(new Date());
 	}
-		
+	
+	public Invoice(String guid) {
+		super(guid);
+		this.setInvoiceDate(new Date());
+	}
+	
+	@Override
+	@Id	
+	public String getGUID() {
+		return guid;
+	}
+	
 	public BigDecimal getInvoiceAmt() {
 		return invoiceAmt;
 	}

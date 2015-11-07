@@ -4,14 +4,16 @@ import java.io.Serializable;
 import java.util.Date;
 import java.util.UUID;
 
+import javax.persistence.MappedSuperclass;
+
 import org.springframework.data.annotation.Id;
-import org.springframework.util.Assert;
 
 /**
  * @version 1.0
  * @author Hao Meng Yap
  * @since 1 Sept 2015
  */
+@MappedSuperclass
 public abstract class BaseEntity implements Serializable {
 		
 	/**
@@ -19,19 +21,22 @@ public abstract class BaseEntity implements Serializable {
 	 */
 	private static final long serialVersionUID = -4423845106924187650L;
 	@Id
-	private String guid;
-	private int version;
-	private Date timeCreated, timeModified;
+	protected String guid;
+	protected int version;
+	protected Date dateCreated, dateModified;
 	
 	public BaseEntity() {
         this(UUID.randomUUID());
     }
 
-    public BaseEntity(UUID guid) {
-        Assert.notNull(guid, "UUID is required");
-        this.guid = guid.toString();
-        this.timeCreated = new Date();
-        this.timeModified = new Date();
+    public BaseEntity(UUID guid) {        
+        this(guid.toString());
+    }
+    
+    public BaseEntity(String guid) {
+    	this.guid = guid;
+    	this.dateCreated = new Date();
+        this.dateModified = new Date();
         this.version = 0;
     }
 
@@ -40,15 +45,15 @@ public abstract class BaseEntity implements Serializable {
     }
     
     public Date getTimeCreated() {
-    	return timeCreated;
+    	return dateCreated;
     }
     
     public Date getTimeModified() {
-    	return timeModified;
+    	return dateModified;
     }
     
     public void setTimeModified(Date timeModified) {
-    	this.timeModified = timeModified;
+    	this.dateModified = timeModified;
     }
     
     public int getVersion() {
