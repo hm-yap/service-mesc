@@ -26,57 +26,60 @@
 	</dependencyManagement>
 
 	<dependencies>
-		<!-- Spring MVC Support ->
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-webmvc</artifactId>			
-		</dependency> -->
+		<!-- Spring MVC Support -> <dependency> <groupId>org.springframework</groupId> 
+			<artifactId>spring-webmvc</artifactId> </dependency> -->
 
 		<dependency>
 			<groupId>org.springframework</groupId>
-			<artifactId>spring-web</artifactId>			
+			<artifactId>spring-web</artifactId>
 		</dependency>
 
 		<dependency>
 			<groupId>org.springframework</groupId>
-			<artifactId>spring-core</artifactId>			
+			<artifactId>spring-core</artifactId>
 		</dependency>
 
 		<!-- Spring Data JPA -->
 		<dependency>
 			<groupId>org.springframework.data</groupId>
-			<artifactId>spring-data-jpa</artifactId>			
+			<artifactId>spring-data-jpa</artifactId>
 		</dependency>
 
 		<!-- Hibernate-JPA -->
 		<dependency>
 			<groupId>org.hibernate</groupId>
-			<artifactId>hibernate-entitymanager</artifactId>			
+			<artifactId>hibernate-entitymanager</artifactId>
+		</dependency>
+
+		<!-- DataSource (HikariCP) -->
+		<dependency>
+			<groupId>com.zaxxer</groupId>
+			<artifactId>HikariCP</artifactId>
 		</dependency>
 
 		<!-- MYSQL DB Driver -->
 		<dependency>
 			<groupId>mysql</groupId>
-			<artifactId>mysql-connector-java</artifactId>			
+			<artifactId>mysql-connector-java</artifactId>
 		</dependency>
 
 		<!-- Google JSON Processor -->
 		<dependency>
 			<groupId>com.google.code.gson</groupId>
-			<artifactId>gson</artifactId>			
+			<artifactId>gson</artifactId>
 		</dependency>
 
 		<!-- Servlet Filter API to handle static content -->
 		<dependency>
 			<groupId>javax.servlet</groupId>
-			<artifactId>javax.servlet-api</artifactId>			
+			<artifactId>javax.servlet-api</artifactId>
 			<scope>provided</scope>
 		</dependency>
 
 		<!-- Apache POI to handle Microsoft format files (Excel, Word, etc) -->
 		<dependency>
 			<groupId>org.apache.poi</groupId>
-			<artifactId>poi</artifactId>			
+			<artifactId>poi</artifactId>
 		</dependency>
 	</dependencies>
 
