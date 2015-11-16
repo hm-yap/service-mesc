@@ -1,10 +1,13 @@
 package com.mesc.service.entity;
 
+import javax.persistence.AttributeOverride;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
 @Entity
 @Table(name = "phone_model")
+@AttributeOverride(name = "guid", column = @Column(name = "pm_id"))
 public class PhoneModel extends BaseEntity {
 
 	/**

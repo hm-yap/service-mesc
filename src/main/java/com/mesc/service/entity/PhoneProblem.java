@@ -2,11 +2,14 @@ package com.mesc.service.entity;
 
 import java.math.BigDecimal;
 
+import javax.persistence.AttributeOverride;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
 @Entity
 @Table(name="phone_problem")
+@AttributeOverride(name = "guid", column = @Column(name = "pp_id"))
 public class PhoneProblem extends BaseEntity {
 	/**
 	 * 

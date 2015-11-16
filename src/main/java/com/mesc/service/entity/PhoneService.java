@@ -3,11 +3,14 @@ package com.mesc.service.entity;
 import java.math.BigDecimal;
 import java.util.Date;
 
+import javax.persistence.AttributeOverride;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
 @Entity
 @Table(name = "phone_service")
+@AttributeOverride(name = "guid", column = @Column(name = "ps_id"))
 public class PhoneService extends BaseEntity {
 
 	/**

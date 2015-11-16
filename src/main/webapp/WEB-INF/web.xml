@@ -4,29 +4,5 @@
 	      http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
 	      version="3.0">
 	<display-name>MESC</display-name>	
-	<filter>
-		<filter-name>default</filter-name>		
-		<filter-class>com.mesc.filter.StaticContentFilter</filter-class>
-	</filter>
-	<filter-mapping>
-		<filter-name>default</filter-name>
-		<url-pattern>/bower_components/*</url-pattern>
-		<url-pattern>/css/*</url-pattern>
-		<url-pattern>/data/*</url-pattern>
-		<url-pattern>/images/*</url-pattern>
-		<url-pattern>/js/*</url-pattern>
-		<url-pattern>/module/*</url-pattern>
-		<url-pattern>*.html</url-pattern>
-	</filter-mapping>
-	<servlet>
-		<servlet-name>spring</servlet-name>
-		<servlet-class>
-			org.springframework.web.servlet.DispatcherServlet
-		</servlet-class>
-		<load-on-startup>1</load-on-startup>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>spring</servlet-name>
-		<url-pattern>/</url-pattern>
-	</servlet-mapping>
+	
 </web-app>

@@ -1,10 +1,13 @@
 package com.mesc.service.entity;
 
+import javax.persistence.AttributeOverride;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
 @Entity
 @Table(name = "service_status")
+@AttributeOverride(name = "guid", column = @Column(name = "ss_id"))
 public class ServiceStatus extends BaseEntity {
 
 	/**

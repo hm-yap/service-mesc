@@ -6,9 +6,11 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
 @Configuration
-@ComponentScan("com.mesc.service.config")
+@EnableWebMvc
+@ComponentScan(basePackages = { "com.mesc.service.controller" })
 @Import({PersistenceContext.class})
 public class ApplicationContext {
 	@Configuration

@@ -2,11 +2,14 @@ package com.mesc.service.entity;
 
 import java.math.BigDecimal;
 
+import javax.persistence.AttributeOverride;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
 @Entity
 @Table(name = "repair_parts")
+@AttributeOverride(name = "guid", column = @Column(name = "rp_id"))
 public class RepairParts extends BaseEntity {
 
 	/**
