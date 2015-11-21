@@ -18,16 +18,29 @@ public class Invoice extends BaseEntity {
 	 */
 	private static final long serialVersionUID = -840296853662944895L;
 	private BigDecimal invoiceAmt, taxPct, taxAmt, subTotal, roundAdj, totalAmt;
+	private String invoiceNum;
 	private Date invoiceDate;
 	
 	public Invoice() {
 		super();
-		this.setInvoiceDate(new Date());
+		this.invoiceDate = new Date();
+		this.invoiceAmt = new BigDecimal("0.00");
+		this.taxPct = new BigDecimal("0.00");
+		this.taxAmt = new BigDecimal("0.00");
+		this.subTotal = new BigDecimal("0.00");
+		this.roundAdj = new BigDecimal("0.00");
+		this.totalAmt = new BigDecimal("0.00");
 	}
 	
 	public Invoice(String guid) {
 		super(guid);
-		this.setInvoiceDate(new Date());
+		this.invoiceDate = new Date();
+		this.invoiceAmt = new BigDecimal("0.00");
+		this.taxPct = new BigDecimal("0.00");
+		this.taxAmt = new BigDecimal("0.00");
+		this.subTotal = new BigDecimal("0.00");
+		this.roundAdj = new BigDecimal("0.00");
+		this.totalAmt = new BigDecimal("0.00");
 	}	
 	
 	public BigDecimal getInvoiceAmt() {
@@ -84,5 +97,13 @@ public class Invoice extends BaseEntity {
 
 	public void setInvoiceDate(Date invoiceDate) {
 		this.invoiceDate = invoiceDate;
+	}
+
+	public String getInvoiceNum() {
+		return invoiceNum;
+	}
+
+	public void setInvoiceNum(String invoiceNum) {
+		this.invoiceNum = invoiceNum;
 	}
 }
