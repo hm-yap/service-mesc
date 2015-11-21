@@ -1,11 +1,11 @@
-package com.mesc.service.manager;
+package com.mesc.service.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.mesc.service.entity.Invoice;
 import com.mesc.service.repository.InvoiceRepository;
 
-public class InvoiceManager {
+public class InvoiceService {
 	@Autowired
 	private InvoiceRepository invRepo;
 	
