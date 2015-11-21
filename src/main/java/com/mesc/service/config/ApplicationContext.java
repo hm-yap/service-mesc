@@ -10,7 +10,7 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
 @Configuration
 @EnableWebMvc
-@ComponentScan(basePackages = { "com.mesc.service.controller" })
+@ComponentScan(basePackages = { "com.mesc.service.controller", "com.mesc.service.services" })
 @Import({PersistenceContext.class})
 public class ApplicationContext {
 	@Configuration
