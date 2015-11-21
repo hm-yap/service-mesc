@@ -7,9 +7,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class HealthCheck {
 	private static final String STATUS_PATH = "/status";
-	
+
 	/**
 	 * Health check method
+	 * 
 	 * @return
 	 */
 	@RequestMapping(value = STATUS_PATH, method = RequestMethod.GET)

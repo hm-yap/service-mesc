@@ -11,14 +11,15 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 @Configuration
 @EnableWebMvc
 @ComponentScan(basePackages = { "com.mesc.service.controller", "com.mesc.service.services" })
-@Import({PersistenceContext.class})
+@Import({ PersistenceContext.class })
 public class ApplicationContext {
 	@Configuration
-    @PropertySource("classpath:application.properties")
-    static class ApplicationProperties {}
-	
+	@PropertySource("classpath:application.properties")
+	static class ApplicationProperties {
+	}
+
 	@Bean
-    PropertySourcesPlaceholderConfigurer propertyPlaceHolderConfigurer() {
-        return new PropertySourcesPlaceholderConfigurer();
-    }
+	PropertySourcesPlaceholderConfigurer propertyPlaceHolderConfigurer() {
+		return new PropertySourcesPlaceholderConfigurer();
+	}
 }

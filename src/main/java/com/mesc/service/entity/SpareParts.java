@@ -9,12 +9,8 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "spareparts")
-@AttributeOverride(name = "guid", column = @Column(name = "sp_id"))
+@AttributeOverride(name = "guid", column = @Column(name = "sp_id") )
 public class SpareParts extends BaseEntity {
-
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 4603277043710673841L;
 	private String partName;
 	private BigDecimal unitPrice;
@@ -24,7 +20,7 @@ public class SpareParts extends BaseEntity {
 		this.partName = partName;
 		this.unitPrice = unitPrice;
 	}
-	
+
 	public String getPartName() {
 		return partName;
 	}

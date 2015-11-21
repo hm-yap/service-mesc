@@ -10,12 +10,8 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "phone_service")
-@AttributeOverride(name = "guid", column = @Column(name = "ps_id"))
+@AttributeOverride(name = "guid", column = @Column(name = "ps_id") )
 public class PhoneService extends BaseEntity {
-
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = -4399685719299942278L;
 	private String imei;
 	private int jobNo;
@@ -29,7 +25,7 @@ public class PhoneService extends BaseEntity {
 		this.svcCharge = new BigDecimal("0.00");
 		this.dateIn = new Date();
 	}
-	
+
 	public String getImei() {
 		return imei;
 	}

@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class ServiceController {
 	private static final String SERVICE_PATH = "/service";
-	
+
 	/**
 	 * Temporary placeholder - Work in Progress
 	 * 

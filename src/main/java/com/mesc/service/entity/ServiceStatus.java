@@ -7,12 +7,8 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "service_status")
-@AttributeOverride(name = "guid", column = @Column(name = "ss_id"))
+@AttributeOverride(name = "guid", column = @Column(name = "ss_id") )
 public class ServiceStatus extends BaseEntity {
-
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = -6056396766392771212L;
 	private String statusName, description;
 

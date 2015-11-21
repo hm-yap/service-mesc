@@ -7,12 +7,8 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "phone_model")
-@AttributeOverride(name = "guid", column = @Column(name = "pm_id"))
+@AttributeOverride(name = "guid", column = @Column(name = "pm_id") )
 public class PhoneModel extends BaseEntity {
-
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 7338327104689237614L;
 	private String brand, model;
 

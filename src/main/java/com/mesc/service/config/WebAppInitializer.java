@@ -11,23 +11,21 @@ import org.springframework.web.servlet.DispatcherServlet;
 
 public class WebAppInitializer implements WebApplicationInitializer {
 	private static final String DISPATCHER_SERVLET_NAME = "dispatcher";
-    private static final String DISPATCHER_SERVLET_MAPPING = "/";
+	private static final String DISPATCHER_SERVLET_MAPPING = "/";
 
 	@Override
 	public void onStartup(ServletContext servletContext) throws ServletException {
 		AnnotationConfigWebApplicationContext rootContext = new AnnotationConfigWebApplicationContext();
-        rootContext.register(ApplicationContext.class);
+		rootContext.register(ApplicationContext.class);
 
-        configureDispatcherServlet(servletContext, rootContext);
-    }
+		configureDispatcherServlet(servletContext, rootContext);
+	}
 
-    private void configureDispatcherServlet(ServletContext servletContext, WebApplicationContext rootContext) {
-        ServletRegistration.Dynamic dispatcher = servletContext.addServlet(
-                DISPATCHER_SERVLET_NAME,
-                new DispatcherServlet(rootContext)
-        );
-        dispatcher.setLoadOnStartup(1);
-        dispatcher.addMapping(DISPATCHER_SERVLET_MAPPING);
-    }
+	private void configureDispatcherServlet(ServletContext servletContext, WebApplicationContext rootContext) {
+		ServletRegistration.Dynamic dispatcher = servletContext.addServlet(DISPATCHER_SERVLET_NAME,
+				new DispatcherServlet(rootContext));
+		dispatcher.setLoadOnStartup(1);
+		dispatcher.addMapping(DISPATCHER_SERVLET_MAPPING);
+	}
 
 }

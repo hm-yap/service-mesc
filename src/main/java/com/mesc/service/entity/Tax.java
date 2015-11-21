@@ -11,7 +11,6 @@ import com.mesc.service.util.FinanceUtil;
  *
  */
 public class Tax {
-
 	private String invoiceAmt, taxPercent, taxAmt, subTotal, roundAmt, total;
 
 	public Tax(BigDecimal invAmt, BigDecimal taxPct) {

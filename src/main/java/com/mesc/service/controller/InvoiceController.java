@@ -19,10 +19,10 @@ import com.mesc.service.services.InvoiceService;
 public class InvoiceController {
 	/* Path for Invoice related services */
 	private static final String INVOICE_PATH = "/invoice";
-		
+
 	private static Gson gson = new GsonBuilder().create();
 	private final InvoiceService invService;
-	
+
 	@Autowired
 	InvoiceController(InvoiceService invService) {
 		this.invService = invService;

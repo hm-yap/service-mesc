@@ -9,18 +9,14 @@ import javax.persistence.Entity;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="invoice")
-@AttributeOverride(name = "guid", column = @Column(name = "invoiceid"))
+@Table(name = "invoice")
+@AttributeOverride(name = "guid", column = @Column(name = "invoiceid") )
 public class Invoice extends BaseEntity {
-	
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = -840296853662944895L;
 	private BigDecimal invoiceAmt, taxPct, taxAmt, subTotal, roundAdj, totalAmt;
 	private String invoiceNum;
 	private Date invoiceDate;
-	
+
 	public Invoice() {
 		super();
 		this.invoiceDate = new Date();
@@ -31,7 +27,7 @@ public class Invoice extends BaseEntity {
 		this.roundAdj = new BigDecimal("0.00");
 		this.totalAmt = new BigDecimal("0.00");
 	}
-	
+
 	public Invoice(String guid) {
 		super(guid);
 		this.invoiceDate = new Date();
@@ -41,16 +37,16 @@ public class Invoice extends BaseEntity {
 		this.subTotal = new BigDecimal("0.00");
 		this.roundAdj = new BigDecimal("0.00");
 		this.totalAmt = new BigDecimal("0.00");
-	}	
-	
+	}
+
 	public BigDecimal getInvoiceAmt() {
 		return invoiceAmt;
 	}
-	
+
 	public void setInvoiceAmt(BigDecimal invoiceAmt) {
 		this.invoiceAmt = invoiceAmt;
 	}
-	
+
 	public BigDecimal getTaxPct() {
 		return taxPct;
 	}
@@ -62,11 +58,11 @@ public class Invoice extends BaseEntity {
 	public BigDecimal getTaxAmt() {
 		return taxAmt;
 	}
-	
+
 	public void setTaxAmt(BigDecimal taxAmt) {
 		this.taxAmt = taxAmt;
 	}
-	
+
 	public BigDecimal getSubTotal() {
 		return subTotal;
 	}
@@ -78,15 +74,15 @@ public class Invoice extends BaseEntity {
 	public BigDecimal getRoundAdj() {
 		return roundAdj;
 	}
-	
+
 	public void setRoundAdj(BigDecimal roundAdj) {
 		this.roundAdj = roundAdj;
 	}
-	
+
 	public BigDecimal getTotalAmt() {
 		return totalAmt;
 	}
-	
+
 	public void setTotalAmt(BigDecimal totalAmt) {
 		this.totalAmt = totalAmt;
 	}

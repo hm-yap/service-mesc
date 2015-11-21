@@ -8,16 +8,13 @@ import javax.persistence.Entity;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="phone_problem")
-@AttributeOverride(name = "guid", column = @Column(name = "pp_id"))
+@Table(name = "phone_problem")
+@AttributeOverride(name = "guid", column = @Column(name = "pp_id") )
 public class PhoneProblem extends BaseEntity {
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1472030457662135436L;
 	private String detail;
 	private BigDecimal partsAmt;
-	
+
 	public PhoneProblem() {
 		super();
 	}
