@@ -10,7 +10,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "invoice")
-@AttributeOverride(name = "guid", column = @Column(name = "invoiceid") )
+@AttributeOverride(name = "guid", column = @Column(name = "inv_id") )
 public class Invoice extends BaseEntity {
 	private static final long serialVersionUID = -840296853662944895L;
 	private BigDecimal invoiceAmt, taxPct, taxAmt, subTotal, roundAdj, totalAmt;

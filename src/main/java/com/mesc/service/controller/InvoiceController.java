@@ -35,7 +35,7 @@ public class InvoiceController {
 	 */
 	@RequestMapping(value = INVOICE_PATH, method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
 	public String createInvoice() {
-		return gson.toJson(invService.createInvoice(), Invoice.class);
+		return gson.toJson(invService.create(), Invoice.class);
 	}
 
 	/**
