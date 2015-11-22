@@ -10,20 +10,12 @@ import javax.persistence.Table;
 @AttributeOverride(name = "guid", column = @Column(name = "pm_id") )
 public class PhoneModel extends BaseEntity {
 	private static final long serialVersionUID = 7338327104689237614L;
-	private String brand, model;
+	private String pb_id, model, modelNum;
 
-	public PhoneModel(String brand, String model) {
+	public PhoneModel(String pb_id, String model) {
 		super();
-		this.brand = brand;
+		this.pb_id = pb_id;
 		this.model = model;
-	}
-
-	public String getBrand() {
-		return brand;
-	}
-
-	public void setBrand(String brand) {
-		this.brand = brand;
 	}
 
 	public String getModel() {
@@ -32,6 +24,22 @@ public class PhoneModel extends BaseEntity {
 
 	public void setModel(String model) {
 		this.model = model;
+	}
+
+	public String getModelNum() {
+		return modelNum;
+	}
+
+	public void setModelNum(String modelNum) {
+		this.modelNum = modelNum;
+	}
+
+	public String getPb_id() {
+		return pb_id;
+	}
+
+	public void setPb_id(String pb_id) {
+		this.pb_id = pb_id;
 	}
 
 }
