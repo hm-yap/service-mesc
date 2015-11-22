@@ -7,10 +7,11 @@ import org.springframework.data.repository.Repository;
 
 import com.mesc.service.entity.Invoice;
 
-@Transactional
 public interface InvoiceRepository extends Repository<Invoice, String> {
+	@Transactional
 	void delete(Invoice deleted);
-
+	
+	@Transactional
 	Invoice save(Invoice persisted);
 
 	/**
