@@ -12,6 +12,13 @@ public class PhoneModel extends BaseEntity {
 	private static final long serialVersionUID = 7338327104689237614L;
 	private String pb_id, model, modelNum;
 
+	public PhoneModel() {
+		super();
+		pb_id = "Some Random Brand ID";
+		model = "Some Model";
+		modelNum = "ABC-123-ZZZ";
+	}
+	
 	public PhoneModel(String pb_id, String model) {
 		super();
 		this.pb_id = pb_id;

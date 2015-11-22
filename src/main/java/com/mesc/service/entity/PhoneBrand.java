@@ -12,6 +12,11 @@ public class PhoneBrand extends BaseEntity {
 	private static final long serialVersionUID = -5953286373063234410L;
 	private String brandName;
 
+	public PhoneBrand() {
+		super();
+		brandName = "SomeName";
+	}
+	
 	public PhoneBrand(String brandName) {
 		super();
 		this.brandName = brandName;		
