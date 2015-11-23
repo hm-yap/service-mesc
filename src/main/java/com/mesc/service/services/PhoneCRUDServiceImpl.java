@@ -28,7 +28,9 @@ public class PhoneCRUDServiceImpl implements PhoneCRUDService {
 
 	@Override
 	public PhoneModel insertModel() {
-		PhoneModel newPhoneModel = new PhoneModel("Brand ID Here", "Some Model");
+		PhoneBrand placeholderBrand = new PhoneBrand("RoarNeWz");
+		phoneBrandRepo.save(placeholderBrand);
+		PhoneModel newPhoneModel = new PhoneModel("Some Model", placeholderBrand);
 		return phoneModelRepo.save(newPhoneModel);
 	}
 

@@ -3,6 +3,9 @@ package com.mesc.service.entity;
 import javax.persistence.AttributeOverride;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -10,19 +13,23 @@ import javax.persistence.Table;
 @AttributeOverride(name = "guid", column = @Column(name = "pm_id") )
 public class PhoneModel extends BaseEntity {
 	private static final long serialVersionUID = 7338327104689237614L;
-	private String pb_id, model, modelNum;
+	private String model, modelNum;
+	
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "pb_id", nullable = false)
+	private PhoneBrand phoneBrand;
 
 	public PhoneModel() {
-		super();
-		pb_id = "Some Random Brand ID";
+		super();		
 		model = "Some Model";
 		modelNum = "ABC-123-ZZZ";
+		phoneBrand = new PhoneBrand("Default");
 	}
 	
-	public PhoneModel(String pb_id, String model) {
-		super();
-		this.pb_id = pb_id;
+	public PhoneModel(String model, PhoneBrand phoneBrand) {
+		super();		
 		this.model = model;
+		this.phoneBrand = phoneBrand;
 	}
 
 	public String getModel() {
@@ -41,12 +48,12 @@ public class PhoneModel extends BaseEntity {
 		this.modelNum = modelNum;
 	}
 
-	public String getPb_id() {
-		return pb_id;
+	public PhoneBrand getPhoneBrand() {
+		return phoneBrand;
 	}
 
-	public void setPb_id(String pb_id) {
-		this.pb_id = pb_id;
+	public void setPhoneBrand(PhoneBrand phoneBrand) {
+		this.phoneBrand = phoneBrand;
 	}
 
 }
